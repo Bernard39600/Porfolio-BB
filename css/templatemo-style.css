@@ -1,0 +1,380 @@
+
+/* engagement: uniquement pour le H1 */
+@font-face {
+    font-family: "Engagement";
+    src: url("../fonts/Engagement/Engagement-Regular.ttf");
+}
+
+/* Milonga-Regular titres sauf h1 */
+@font-face {
+    font-family: "Milonga";
+    src: url("../fonts/Milonga/Milonga-Regular.ttf");
+}
+
+/* Unna-Regular paragraphes */
+@font-face {
+    font-family: "Unna";
+    src: url("../fonts/Unna/Unna-Regular.ttf");
+}
+
+body {
+    background: black;
+    color: #999;
+    font-family: 'Unna';
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#home,
+#work,
+#about,
+#contact,
+#portfolio,
+footer {
+    height: auto !important;
+}
+
+h2,
+h3,
+h4 {
+    color: white;
+    font-weight: bold;
+    font-family: "Milonga";
+}
+
+#work,
+#about,
+#portfolio,
+#contact {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* Ajouter un lien vers GitHub ! ! */
+/* remplir correctement le README.md ds le projet github */
+#home {
+    background: url('../images/Lines_stripes.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 130px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-family: "Engagement";
+    font-size: 120px;
+    color: #D43F52;
+    display: inline-block;
+    letter-spacing: 6px;
+    padding: 25px 35px;
+    margin: 30px 0;
+}
+
+.btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    width: 180px;
+    height: 60px;
+    margin-top: 40px;
+    padding-top: 18px;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+    background: #D43F52;
+    border-color: transparent;
+}
+
+/* start work */
+#work {
+    background: #1a1a1a;
+}
+
+#work h2 {
+    text-align: center;
+}
+
+#work .media {
+    margin-top: 30px;
+}
+
+#work .media .fa {
+    border: 2px solidwhite;
+    border-radius: 50%;
+    color: #D43F52;
+    font-size: 24px;
+    margin-right: 24px;
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.4s ease-in;
+}
+
+#work .media .fa:hover {
+    background: white;
+    cursor: pointer;
+}
+
+#work .media .media-heading {
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#about h4 {
+    padding: 15px 0;
+    color: #D43F52;
+}
+
+#about .progress {
+    border-radius: 4px;
+    background: white;
+    height: 4px;
+}
+
+#about .progress .progress-bar-danger {
+    background: #D43F52;
+}
+
+#about .text-top {
+    padding-top: 50px;
+}
+
+#about span {
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 6px;
+}
+
+#about small {
+    font-weight: bold;
+    float: right;
+}
+
+#portfolio {
+    background: #1a1a1a;
+    text-align: center;
+}
+
+#portfolio h2 {
+    padding-bottom: 30px;
+}
+
+#portfolio .portfolio-thumb {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#portfolio .portfolio-thumb .portfolio-overlay {
+    background: #D43F52;
+    color: black;
+    border-radius: 30px;
+    font-size: 25px;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-top: 60px;
+    transition: all 0.4s ease-in-out;
+}
+
+#portfolio .portfolio-thumb:hover .portfolio-overlay {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(0.9);
+}
+
+#contact address {
+    padding-bottom: 18px;
+}
+
+#contact .contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: white;
+}
+
+#contact .fa {
+    display: inline-block;
+    border: 2px solidwhite;
+    border-radius: 50%;
+    color: #D43F52;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#contact .form-control {
+    background: transparent;
+    border: 2px solid #999;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer {
+    border-top: 1px solid #090909;
+    text-align: center;
+}
+
+.social-icon {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icon li {
+    display: inline-block;
+    list-style: none;
+}
+
+.social-icon li a {
+    border-radius: 50%;
+    color: #606060;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.social-icon li a:hover {
+    color: #D43F52;
+}
+
+/* modal*/
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.modal-btn:checked+label:hover,
+.modal-btn:checked+label,
+.modal-btn:not(:checked)+label {
+
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    width: 180px;
+    height: 60px;
+    margin-top: 40px;
+    padding-top: 18px;
+    transition: all 0.4s ease-in-out;
+
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.modal-btn:checked+label:hover,
+.modal-btn:not(:checked)+label:hover {
+    background-color: #D43F52;
+    color: black;
+}
+
+.modal-btn:checked+label:after,
+.modal-btn:not(:checked)+label:after {
+    position: absolute;
+    float: right;
+    top: 50px;
+    right: 50px;
+    z-index: 110;
+    width: 40px;
+    border-radius: 3px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    background-color: red;
+    color: black;
+    content: 'X';
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.modal-btn:checked+label:hover:after,
+.modal-btn:not(:checked)+label:hover:after {
+    background-color: #D43F52;
+    color: #090909;
+    border-color: transparent;
+
+}
+
+.modal-btn:checked+label:after {
+    transition: opacity 300ms 300ms ease, transform 300ms 300ms ease, background-color 250ms linear, color 250ms linear;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+.modal {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow-x: hidden;
+    background-color: rgba(31, 32, 41, .75);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 250ms 700ms ease;
+}
+
+/* affiche modal */
+.modal-btn:checked~.modal {
+    pointer-events: auto;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.modal-wrap {
+    position: relative;
+    display: block;
+    width: 50%;
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+
+    align-self: center;
+    /* transition ouverture */
+    transform: scale(0.6);
+    transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
+
+}
+
+.modal-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* transition fermeture modal */
+.modal-btn:checked~.modal .modal-wrap {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
+}
