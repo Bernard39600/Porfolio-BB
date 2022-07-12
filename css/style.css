@@ -1,4 +1,3 @@
-
 /* engagement: uniquement pour le H1 */
 @font-face {
     font-family: "Engagement";
@@ -26,12 +25,14 @@ body {
     line-height: 1.1;
 }
 
-#home,
+#home {
+    height: 100vh !important;
+}
+
 #about,
 #contact,
 #portfolio,
 footer {
-    /* passer à 100 vw? */
     height: auto !important;
 }
 
@@ -228,70 +229,6 @@ footer {
     left: -9999px;
 }
 
-.modal-btn:checked+label:hover,
-.modal-btn:checked+label,
-.modal-btn:not(:checked)+label {
-
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    width: 180px;
-    height: 60px;
-    margin-top: 40px;
-    padding-top: 18px;
-    transition: all 0.4s ease-in-out;
-
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
-
-}
-
-.modal-btn:checked+label:hover,
-.modal-btn:not(:checked)+label:hover {
-    background-color: #D43F52;
-    color: black;
-}
-
-.modal-btn:checked+label:after,
-.modal-btn:not(:checked)+label:after {
-    position: absolute;
-    float: right;
-    top: 50px;
-    right: 50px;
-    z-index: 110;
-    width: 40px;
-    border-radius: 3px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-size: 18px;
-    background-color: red;
-    color: black;
-    content: 'X';
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(20px);
-}
-
-.modal-btn:checked+label:hover:after,
-.modal-btn:not(:checked)+label:hover:after {
-    background-color: #D43F52;
-    color: #090909;
-    border-color: transparent;
-
-}
-
-.modal-btn:checked+label:after {
-    transition: opacity 300ms 300ms ease, transform 300ms 300ms ease, background-color 250ms linear, color 250ms linear;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
-
 .modal {
     position: fixed;
     display: flex;
@@ -333,10 +270,70 @@ footer {
 }
 
 .modal-wrap img {
-    /* faire mediaQ pour format telephone: cv en plein ecran */
     display: block;
     width: 100%;
     height: auto;
+}
+
+.modal-btn:checked+label:hover,
+.modal-btn:checked+label,
+.modal-btn:not(:checked)+label {
+
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    width: 180px;
+    height: 60px;
+    margin-top: 40px;
+    padding-top: 18px;
+    transition: all 0.4s ease-in-out;
+
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal-btn:checked+label:hover,
+.modal-btn:not(:checked)+label:hover {
+    background-color: #D43F52;
+    color: black;
+}
+
+.modal-btn:checked+label:after,
+.modal-btn:not(:checked)+label:after {
+    position: absolute;
+    float: right;
+    top: 50px;
+    right: 50px;
+    z-index: 110;
+    width: 40px;
+    border-radius: 3px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    background-color: red;
+    color: black;
+    content: 'X';
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.modal-btn:checked+label:hover:after,
+.modal-btn:not(:checked)+label:hover:after {
+    background-color: #D43F52;
+    color: #090909;
+    border-color: transparent;
+}
+
+.modal-btn:checked+label:after {
+    transition: opacity 300ms 300ms ease, transform 300ms 300ms ease, background-color 250ms linear, color 250ms linear;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 /* transition fermeture modal */
