@@ -51,7 +51,6 @@ h4 {
     padding-bottom: 70px;
 }
 
-/* Ajouter un lien vers GitHub ! ! */
 /* remplir le README.md ds le projet github */
 #home {
     background: url('../images/Lines_stripes.jpg');
@@ -90,7 +89,7 @@ h4 {
 
 .btn:hover {
     background: #D43F52;
-    border-color: transparent;
+    border-color: transparent;   
 }
 
 #about h4 {
@@ -179,7 +178,7 @@ h4 {
 
 #contact .fa {
     display: inline-block;
-    border: 2px solidwhite;
+    border: 2px solid white;
     border-radius: 50%;
     color: #D43F52;
     width: 50px;
@@ -247,10 +246,8 @@ footer {
     pointer-events: none;
     opacity: 0;
     transition: opacity 250ms 700ms ease;
-
 }
 
-/* affiche modal */
 .modal-btn:checked~.modal {
     pointer-events: auto;
     opacity: 1;
@@ -260,7 +257,6 @@ footer {
 .modal-wrap {
     position: relative;
     display: block;
-    /* taille modal */
     width: 60%;
     max-width: 80%;
     margin: 0 auto;
@@ -271,10 +267,9 @@ footer {
     /* transition ouverture */
     transform: scale(0.4);
     transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
-
 }
 
-.modal-wrap img {
+.modal-wrap img {  
     display: block;
     width: 100%;
     height: auto;
@@ -320,12 +315,12 @@ footer {
     text-align: center;
     line-height: 30px;
     font-size: 18px;
-    background-color: red;
+    background-color: white;
     color: #090909;
     content: 'X';
     opacity: 0;
     pointer-events: none;
-    transform: translateY(20px);
+    /* transform: translateY(20px); */
 }
 
 .modal-btn:checked+label:hover:after,
@@ -342,13 +337,9 @@ footer {
     transform: translateY(0);
 }
 
-/* transition fermeture modal */
+/* transition ouverture modal */
 .modal-btn:checked~.modal .modal-wrap {
     opacity: 1;
     transform: scale(1);
     transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;
-}
-
-.github-btn{
-    /* href="https://www.ecosia.org/?c=fr" */
 }
