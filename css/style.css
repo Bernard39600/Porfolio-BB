@@ -3,11 +3,13 @@
     font-family: "Engagement";
     src: url("../fonts/Engagement/Engagement-Regular.ttf");
 }
+
 /* Milonga-Regular titres sauf h1 */
 @font-face {
     font-family: "Milonga";
     src: url("../fonts/Milonga/Milonga-Regular.ttf");
 }
+
 /* Unna-Regular paragraphes */
 @font-face {
     font-family: "Unna";
@@ -15,6 +17,9 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
     background: black;
     color: #999;
     font-family: 'Unna';
@@ -86,7 +91,7 @@ h4 {
 
 .btn:hover {
     background: #D43F52;
-    border-color: transparent;   
+    border-color: transparent;
 }
 
 #about h4 {
@@ -213,9 +218,7 @@ footer {
     color: #D43F52;
 } */
 
-/* new modale */
-  
-  .StyleModal {
+.StyleModal {
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -227,35 +230,120 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: rgba(30, 30, 30, .75);
-  }
-  
-  .StyleModal:target {
+}
+
+.StyleModal:target {
     visibility: visible;
     opacity: 1;
     /* scale= taille finale */
     /* transform: scale(1.3); */
     /* transition: opacity 500ms 300ms ease, transform 500ms 300ms ease; */
     transition: opacity 500ms 300ms ease;
-  }
-  
-  .modal_content {
+}
+
+.modal_content {
     border-radius: 20px;
     position: relative;
     background: center/cover url("../images/CV BBrocard.png");
-    
     /* cv origine: 1404 X 2000*/
     width: 468px;
     height: 667px;
-  }
-  
-  .ModalClose {
+}
+
+.ModalClose {
     position: absolute;
     top: 10px;
     right: 10px;
     text-decoration: none;
     font-size: 20px;
-  }
-  
-  .ModalClose:hover {
-    color: blue;
-  }
+}
+
+.ModalClose:hover {
+    color: black;
+}
+
+/* Billes de navigation */
+.fp-section {
+    position: relative;
+}
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+}
+
+#fp-nav.right {
+    right: 17px;
+}
+
+#fp-nav.left {
+    left: 17px;
+}
+
+.fp-slidesNav {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+}
+
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}

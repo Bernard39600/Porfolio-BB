@@ -13,8 +13,8 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-	<!-- fullpage -->
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
+
+	<!-- <link rel="stylesheet" href="css/jquery.fullPage.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -78,12 +78,12 @@
 				</div>
 
 				<!-- modal -->
-				<a href="#OpenModal" class="btn btn-default" data-wow-delay="1s">Voir mon
+				<a href="#OpenModal" class="btn btn-default">Voir mon
 					cv</a>
 
 				<div id="OpenModal" class="StyleModal">
 					<div class="modal_content">
-						<a href="#" class="ModalClose">X</a>
+						<a href="#about" class="ModalClose">X</a>
 					</div>
 				</div>
 
@@ -168,15 +168,26 @@
 					</address>
 				</div>
 				<div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">
-					<form role="form" method="post" action="#">
-						<input name="name" type="text" class="form-control" id="name" placeholder="Nom">
-						<input name="email" type="email" class="form-control" id="email" placeholder="Email">
-						<textarea name="message" rows="7" class="form-control" id="message"
-							placeholder="Votre Message"></textarea>
+					<form role="form" method="post" action="">
+						<input type="text" name="nom" class="form-control" id="name" placeholder="Nom">
+						<!-- <input type="text" name="nom" class="form-control" id="name" placeholder="Votre nom" value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>" /><br /><br />-->
 
-						<a href="#" class="btn btn-default smoothScroll wow fadeInUp" value="Envoyer"
-							data-wow-delay="1s">Envoyer</a>
+						<input type="email" name="mail" class="form-control" id="email" placeholder="Email">
+						<!-- <input type="email" name="mail" class="form-control" id="email" placeholder="Votre email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br /><br /> -->
+
+						<textarea name="message" rows="7" class="form-control" id="message" placeholder="Votre Message"></textarea>
+						<!-- <textarea name="message" rows="7" class="form-control" id="message" placeholder="Votre message"><?php if(isset($_POST['message'])) { echo $_POST['message']; } ?></textarea><br /><br /> -->
+		
+
+						<!-- <a href="#" class="btn btn-default smoothScroll wow fadeInUp" value="Envoyer"
+							data-wow-delay="1s">Envoyer</a> -->
+						<input type="submit" class="btn btn-default smoothScroll wow fadeInUp" value="Envoyer" name="mailform"/>
 					</form>
+
+					<!-- <?php if(isset($msg)) {
+					   echo $msg;
+					}
+					?> -->
 				</div>
 			</div>
 		</div>
@@ -197,12 +208,42 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.fullPage.js"></script>
+	<!-- scroll 'visiter' vers 'about'-->
 	<script src="js/smoothscroll.js"></script>
+	<!-- texte defillement & scroll-->
 	<script src="js/wow.min.js"></script>
-	<!-- texte defillement -->
+	<!-- texte defillement aussi !?!-->
 	<script src="js/jquery.simple-text-rotator.js"></script>
 	<!-- custom (scrolling page)-->
 	<script src="js/custom.js"></script>
 </body>
+<!-- <?php
+if(isset($_POST['mailform'])) {
+   if(!empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['message'])) {
+      $header="MIME-Version: 1.0\r\n";
+      $header.='From:"nom_d\'expediteur"<votre@mail.com>'."\n";
+      $header.='Content-Type:text/html; charset="uft-8"'."\n";
+      $header.='Content-Transfer-Encoding: 8bit';
+      $message='
+      <html>
+         <body>
+            <div align="center">
+           
+               <u>Nom de l\'expéditeur :</u>'.$_POST['nom'].'<br />
+               <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
+               <br />
+               '.nl2br($_POST['message']).'
+          
+            </div>
+         </body>
+      </html>
+      ';
+      mail("b.brocard@codeur.online", "Sujet du message", $message, $header);
+      $msg="Votre message a bien été envoyé !";
+   } else {
+      $msg="Tous les champs doivent être complétés !";
+   }
+}
+?> -->
 
 </html>
