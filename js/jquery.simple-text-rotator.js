@@ -4,12 +4,10 @@
  * Copyright 2013 Pete Rojwongsuriya.
  * http://www.thepetedesign.com
  *
- * A very simple and light weight jQuery plugin that 
- * allows you to rotate multiple text without changing 
- * the layout
- * https://github.com/peachananr/simple-text-rotator
- *
- * ========================================================== */
+ * A very simple and light plugin that allows you to 
+ * rotate multiple text without changing the layout
+ * https://github.com/peachananr/simple-text-rotator */
+ 
 
 !function($){
   
@@ -160,5 +158,3 @@
   }
   
 }(window.jQuery);
-
-

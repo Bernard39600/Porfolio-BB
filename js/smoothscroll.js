@@ -13,7 +13,7 @@ if (!window["jQuery"])
     "The jQuery library must be included before the smoothscroll.js file.  The plugin will not work propery."
   );
 
-/**
+/*
  * Copyright (c) 2007 Ariel Flesler - aflesler ○ gmail • com | https://github.com/flesler
  * Licensed under MIT
  * @author Ariel Flesler
