@@ -16,18 +16,20 @@
     src: url("../fonts/Unna/Unna-Regular.ttf");
 }
 
-
-
 body {
-    /* exemple def variable */
-    --nom-variable: bleu;
+    /* couleurs cv: color:rgb(50, 90, 110) & blanc */
+     --backg1: #000;
+     --backg2: #1a1a1a;
+     --txt1:#fff;
+     --txt2:#D43F52;
+     --txt3: #999;
     
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-    background: black;
-    color: #999;
+    background: var(--backg1);
+    color: var(--txt3);
     font-family: 'Unna';
     font-size: 32px;
     font-weight: 400;
@@ -48,7 +50,7 @@ footer {
 h2,
 h3,
 h4 {
-    color: white;
+    color: var(--txt1);
     font-weight: bold;
     font-family: "Milonga";
     margin: 5px;
@@ -75,7 +77,7 @@ h4 {
 #home h1 {
     font-family: "Engagement";
     font-size: 120px;
-    color: #D43F52;
+    color:var(--txt2);
     display: inline-block;
     letter-spacing: 6px;
     padding: 25px 35px;
@@ -84,9 +86,9 @@ h4 {
 
 .btn {
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid var(--txt1);
     border-radius: 10px;
-    color: white;
+    color: var(--txt1);
     font-size: 16px;
     font-weight: bold;
     width: 180px;
@@ -97,12 +99,16 @@ h4 {
 }
 
 .btn:hover {
-    background: #D43F52;
+    background: var(--txt2);
     border-color: transparent;
+}
+#about h2 {
+    font-size: 34px;   
 }
 
 #about h4 {
-    color: #D43F52;
+    color: var(--txt2);
+    font-size: 32px;
 }
 
 #about p{
@@ -115,7 +121,7 @@ h4 {
 }
 
 #about .progress .progress-bar-danger {
-    background: #D43F52;
+    background: var(--txt2);
 }
 
 #about .text-top {
@@ -123,7 +129,7 @@ h4 {
 }
 
 #about span {
-    color: white;
+    color: var(--txt1);
     font-weight: bold;
     display: block;
     padding-bottom: 6px;
@@ -135,7 +141,7 @@ h4 {
 } */
 
 #portfolio {
-    background: #1a1a1a;
+    background: var(--backg2);
     text-align: center;
     font-size: 20px;
 }
@@ -151,8 +157,8 @@ h4 {
 }
 
 #portfolio .portfolio-thumb .portfolio-overlay {
-    background: #D43F52;
-    color: #090909;
+    background: var(--txt2);
+    color: var(--backg1);
     border-radius: 30px;
     bottom: 0;
     opacity: 0;
@@ -177,14 +183,14 @@ h4 {
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 20px;
-    color: white;
+    color: var(--txt1);
 }
 
 #contact .fa {
     display: inline-block;
-    border: 2px solid white;
+    border: 2px solid var(--txt1);
     border-radius: 50%;
-    color: #D43F52;
+    color: var(--txt2);
     width: 50px;
     height: 50px;
     line-height: 45px;
@@ -194,14 +200,14 @@ h4 {
 
 #contact .form-control {
     background: transparent;
-    border: 2px solid #999;
+    border: 2px solid var(--txt3);
     border-radius: 10px;
-    color: white;
+    color: var(--txt1);
     margin-bottom: 20px;
 }
 
 footer {
-    background: #1a1a1a;
+    background: var(--backg2);
     border-top: 1px solid #090909;
     text-align: center;
 }
@@ -227,7 +233,7 @@ footer {
 }
 
 .social-icon li a:hover {
-    color: #D43F52;
+    color: var(--txt2);
 } */
 
 .StyleModal {
@@ -241,16 +247,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(30, 30, 30, .75);
+    background-color: rgba(50, 50, 50, .60);
 }
 
 .StyleModal:target {
     visibility: visible;
     opacity: 1;
     /* scale= taille finale */
-    /* transform: scale(1.3); */
-    /* transition: opacity 500ms 300ms ease, transform 500ms 300ms ease; */
-    transition: opacity 500ms 300ms ease;
+    /* transform: scale(1.1);
+    transition: opacity 500ms 300ms ease, transform 500ms 300ms ease; */
+    /* transition: opacity 500ms 300ms ease; */
 }
 
 .modal_content {
@@ -271,7 +277,7 @@ footer {
 }
 
 .ModalClose:hover {
-    color: black;
+    color: var(--backg1);
 }
 
 /* Billes de navigation */
@@ -343,7 +349,7 @@ footer {
     height: 4px;
     width: 4px;
     border: 0;
-    background: #fff;
+    background: var(--txt1);
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
