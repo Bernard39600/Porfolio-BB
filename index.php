@@ -173,16 +173,15 @@
 						<!-- <textarea name="message" rows="7" class="form-control" id="message" placeholder="Votre message"><?php if(isset($_POST['message'])) { echo $_POST['message']; } ?></textarea><br /><br /> -->
 		
 
-						<a href="#" class="btn btn-default smoothScroll wow fadeInUp" value="Envoyer"
-							data-wow-delay="1s">Envoyer</a>
+						<a href="#" class="btn btn-default smoothScroll wow fadeInUp" value="Envoyer" name="mailform" data-wow-delay="1s">Envoyer</a>
 						<!-- <input type="submit" class="btn btn-default smoothScroll wow fadeInUp" value="Envoyer" name="mailform"/> -->
 
 					</form>
 
-					<!-- <?php if(isset($msg)) {
+					<?php if(isset($msg)) {
 					   echo $msg;
 					}
-					?> -->
+					?>
 				</div>
 			</div>
 		</div>
@@ -207,7 +206,8 @@
 	<script src="js/jquery.simple-text-rotator.js"></script>
 	<script src="js/custom.js"></script>
 </body>
-<!-- <?php
+
+<?php
 if(isset($_POST['mailform'])) {
    if(!empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['message'])) {
       $header="MIME-Version: 1.0\r\n";
@@ -222,8 +222,7 @@ if(isset($_POST['mailform'])) {
                <u>Nom de l\'expéditeur :</u>'.$_POST['nom'].'<br />
                <u>Mail de l\'expéditeur :</u>'.$_POST['mail'].'<br />
                <br />
-               '.nl2br($_POST['message']).'
-          
+               '.nl2br($_POST['message']).'         
             </div>
          </body>
       </html>
@@ -234,6 +233,6 @@ if(isset($_POST['mailform'])) {
       $msg="Tous les champs doivent être complétés !";
    }
 }
-?> -->
+?>
 
 </html>

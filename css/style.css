@@ -264,8 +264,8 @@ footer {
     position: relative;
     background: center/cover url("../images/CV BBrocard.png");
     /* cv origine: 1404 X 2000*/
-    width: 468px;
-    height: 667px;
+    width: 450px;
+    height: 600px;
 }
 
 .ModalClose {
