@@ -36,10 +36,9 @@
 				<div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
 					<h2>A propos de moi</h2><br>
 					<h4>Développeur Web et Web mobile</h4>
-					<p>J’ai une formation initiale de menuisier (BEP) et d’agenceur (BT). J'ai choisi de me
-						reconvertir. Passionné d’informatique depuis l'adolescence, j'ai
+					<p>J’ai une formation initiale de menuisier (BEP) et d’agenceur (BT). Passionné d’informatique depuis l'adolescence, j'ai
 						programmé quelques années en autodidacte. J'ai aussi des notions de dépannage informatique
-						hardware et software.</p>
+						hardware et software. J'ai décidé de me reconvertir.</p>
 					<p>J’ai choisi de devenir développeur web.</p>
 				</div>
 				<div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
@@ -104,7 +103,7 @@
 						<div class="portfolio-overlay">
 							<h3>Pure haircut</h3>
 							<p>A partir d'une maquette figma,</p>
-							<p>integrer un site</p>
+							<p>intégrer un site</p>
 						</div>
 					</div>
 				</div>
@@ -156,25 +155,20 @@
 					<address>
 						<h2 class="wow bounce">Contactez moi</h2>
 						<br>
-						<p><i class="fa fa-phone"></i> 03 84 66 01 25</p>
+						<p><i class="fa fa-phone"></i> 06 84 05 96 67</p>
 						<p><i class="fa fa-envelope"></i> b.brocard@codeur.online</p>
 						<p><i class="fa fa-map-marker"></i> 39600 Arbois</p>
 					</address>
 				</div>
+
 				<div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">
 					<form role="form" method="post" action="">
-						<input type="text" name="nom" class="form-control" id="name" placeholder="Nom">
-						<!-- <input type="text" name="nom" class="form-control" id="name" placeholder="Votre nom" value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>" /><br /><br />-->
+						<input type="text" name="nom" class="form-control" placeholder="Votre nom" value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>" /><br />
+						<input type="email" name="mail" class="form-control" placeholder="Votre email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br />
+						<textarea name="message" rows="7" class="form-control" placeholder="Votre message"><?php if(isset($_POST['message'])) { echo $_POST['message']; } ?></textarea><br />
 
-						<input type="email" name="mail" class="form-control" id="email" placeholder="Email">
-						<!-- <input type="email" name="mail" class="form-control" id="email" placeholder="Votre email" value="<?php if(isset($_POST['mail'])) { echo $_POST['mail']; } ?>" /><br /><br /> -->
-
-						<textarea name="message" rows="7" class="form-control" id="message" placeholder="Votre Message"></textarea>
-						<!-- <textarea name="message" rows="7" class="form-control" id="message" placeholder="Votre message"><?php if(isset($_POST['message'])) { echo $_POST['message']; } ?></textarea><br /><br /> -->
-		
-
-						<a href="#" class="btn btn-default smoothScroll wow fadeInUp" value="Envoyer" name="mailform" data-wow-delay="1s">Envoyer</a>
-						<!-- <input type="submit" class="btn btn-default smoothScroll wow fadeInUp" value="Envoyer" name="mailform"/> -->
+						<!-- <a href="#contact" class="btn btn-default smoothScroll wow f -->
+						<input class="btn btn-default smoothScroll wow fadeInUp" type="submit" value="Envoyer !" name="mailform"/>
 
 					</form>
 
